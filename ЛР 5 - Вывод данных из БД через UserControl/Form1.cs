@@ -23,7 +23,7 @@ namespace ЛР_5___Вывод_данных_из_БД_через_UserControl
         List<Table_Motorbike> Motorbikes = DB.Table_Motorbike.ToList();
         int AccNumber = 0;
 
-        private void Leading()
+        private void Loading()
         {
             userControlName11.Fill(Motorbikes[AccNumber]);
             userControlName12.Fill(Motorbikes[AccNumber + 1]);
@@ -38,12 +38,12 @@ namespace ЛР_5___Вывод_данных_из_БД_через_UserControl
             else
                 return;
 
-            Leading();
+            Loading();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Leading();
+            Loading();
         }
 
         private void buttonRight_Click(object sender, EventArgs e)
